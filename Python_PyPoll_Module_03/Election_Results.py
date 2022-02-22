@@ -1,15 +1,15 @@
 import csv
 import os
 
-input = "PyPoll_Module_03/Python_PyPoll_Module_03/election_results.csv"
-county_out = "PyPoll_Module_03/Python_PyPoll_Module_03/county_summary.csv"
-text_out = "PyPoll_Module_03/Python_PyPoll_Module_03/election_summary.txt"
-
+input = "election_results.csv"
+county_out = "county_summary.csv"
+text_out = "election_summary.txt"
+dirpath = os.path.dirname(__file__)
 # Add a variable to load a file from a path.
-file_to_load = os.path.join("..", input)
+file_to_load = os.path.join(dirpath, input)
 # Add a variable to save the file to a path.
-county_summary_output = os.path.join("..", county_out)
-txt_file_output = os.path.join("..", text_out)
+county_summary_output = os.path.join(dirpath, county_out)
+txt_file_output = os.path.join(dirpath, text_out)
 
 # Initialize variables.
 total_votes = 0
